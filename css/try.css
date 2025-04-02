@@ -1,0 +1,355 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+.nav-item:hover .dropdown-menu{
+    display: block;
+    transition: all 0.3s;
+ }
+ .nav-item-special:hover .dropdown-menu{
+   display: block;
+   transition: all 0.3s;
+}
+ .dropdown-menu{
+    display: none;
+    border: 1px solid black;
+ }
+.dropdown-menu .dropdown-item:hover{
+   color: blue;
+   transition: all 0.3s;
+}
+.text p{
+   font-size: 18px;
+   font-weight: 400;
+   font-family: 'Times New Roman', Times, serif;
+}
+ .text-list li{
+   font-size: 18px;
+   font-weight: 400;
+   font-family: 'Times New Roman', Times, serif;
+ }
+.text-title{
+   font-size: 20px;
+   font-style: italic;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+   font-weight: 600;
+}
+/* Image section */
+.contain{
+   padding: 10px;
+}
+.img img{
+   height: 250px;
+   width: 180px;
+}
+.img-text a{
+   text-decoration: none;
+   color: white;
+   font-size: 18px;
+   font-family: 'Times New Roman', Times, serif;
+   font-style: italic;
+   font-weight: 600;
+}
+/* logo section */
+.logo-2 img{
+   border-radius: 50px;
+}
+/* footer */
+#footer{
+   color: white;
+   background-color: #003366;
+   padding: 10px 0;
+ }
+.img-text {
+   max-width: 350px;
+   line-height: 1.6;
+   color: grey;
+   font-size: 18px;
+  }
+  .Git button{
+   padding: 5px 30px;
+   border: 1px solid white;
+   border-radius: 0%;
+ }
+ .Git button:hover{
+   background: white;
+ }
+ .contact p{
+   font-size: 18px;
+   font-family: 'Times New Roman', Times, serif;
+   font-style: oblique;
+   font-weight: 700;
+ }
+ .Git p{
+   font-size: 18px;
+   font-family: 'Times New Roman', Times, serif;
+   font-style: oblique;
+   font-weight: 700;
+ }
+  @media (max-width: 992px) {
+   .nav-item{
+      border-bottom: 2px solid white;
+   }
+  }
+  @media (min-width: 992px) {
+   .nav-item{
+      border-bottom: none !important;
+   }
+  }
+  /* body section */
+ .container-fluid2{
+   background-image: url(../image/background.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   height: 50vh;
+   position: relative;
+  }
+.body-text{
+  padding-top: 15vh;
+  position: absolute;
+  right: 55vh;
+}
+.body-text h2{
+   font-size: 30px;
+   font-weight: 400;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   font-style: oblique;
+}
+.body-text p{
+   font-size: 16px;
+   font-weight: 400;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   font-style: oblique;
+}
+.courses{
+   display: grid;
+   /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+   grid-template-columns: repeat(5, 1fr);
+   gap: 20px;
+   padding: 20px;
+}
+.courses article{
+   padding: 20px 5px;
+   background-color: #ffffff;
+   border: 1px solid #ddd;
+   box-shadow: p 4px 6px rgba(0, 0, 0, 0.1);
+   text-align: center;
+}
+.courses article:hover{
+   background-color: whitesmoke;
+}
+.courses article h3{
+   font-size: 20px;
+   margin-bottom: 10px;
+   color: #333;
+   font-family: 'Times New Roman', Times, serif;
+   font-weight: 600;
+}
+.courses article p{
+   font-size: 16px;
+   color: #666;
+   line-height: 1.4;
+   font-family: 'Times New Roman', Times, serif;
+}
+.container-fluid .h3{
+   color: black;
+   font-size: 30px;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   font-style: oblique;
+   font-weight: 400;
+}
+
+
+/* General Reset */
+body {
+   padding: 0;
+   margin: 0;
+}
+
+/* Navigation Dropdown */
+.nav-item:hover .dropdown-menu {
+   display: block;
+   transition: all 0.3s;
+}
+.dropdown-menu {
+   display: none;
+   border: 1px solid black;
+}
+.dropdown-menu .dropdown-item:hover {
+   color: blue;
+   transition: all 0.3s;
+}
+
+/* Header Logo Responsiveness */
+.logo img, .logo-2 img {
+   max-width: 80%;
+   height: auto;
+}
+@media (min-width: 992px) {
+   .logo img {
+       height: 60px;
+   }
+   .logo-2 img {
+       height: 75px;
+       width: 100px;
+   }
+}
+@media (max-width: 768px) {
+   .logo img {
+       height: 50px;
+   }
+   .logo-2 img {
+       height: 80px;
+       width: 100px;
+   }
+}
+@media (max-width: 576px) {
+   .logo img {
+       height: 40px;
+   }
+   .logo-2 img {
+       height: 50px;
+       width: 50px;
+   }
+}
+
+/* Responsive Body Section */
+.container-fluid2 {
+   background-image: url(../image/background.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   height: 50vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   /* text-align: center; */
+   padding: 10px;
+   position: relative;
+}
+.body-text {
+   position: absolute;
+   right: 55vh;
+}
+.body-text h2 {
+   font-size: 28px;
+   font-weight: 400;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   font-style: oblique;
+}
+.body-text p {
+   font-size: 16px;
+   font-weight: 400;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   font-style: oblique;
+}
+@media (max-width: 992px) {
+   .body-text {
+       right: 30vh;
+   }
+}
+@media (max-width: 768px) {
+   .body-text {
+       right: auto;
+       text-align: center;
+       width: 100%;
+       padding: 0 10px;
+   }
+}
+/* Courses Section - Responsive Grid with Bootstrap */
+.courses {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   gap: 20px;
+   padding: 20px;
+}
+.courses article {
+   padding: 20px;
+   background-color: #ffffff;
+   border: 1px solid #ddd;
+   box-shadow: 4px 6px rgba(0, 0, 0, 0.1);
+   text-align: center;
+   transition: background 0.3s;
+}
+.courses article:hover {
+   background-color: whitesmoke;
+}
+.courses article h3 {
+   font-size: 20px;
+   margin-bottom: 10px;
+   color: #333;
+   font-family: 'Times New Roman', Times, serif;
+   font-weight: 600;
+}
+.courses article p {
+   font-size: 16px;
+   color: #666;
+   line-height: 1.4;
+   font-family: 'Times New Roman', Times, serif;
+}
+
+/* Footer Section Responsiveness with Bootstrap */
+#footer {
+   color: white;
+   background-color: #003366;
+   padding: 20px 0;
+   text-align: center;
+}
+.footer-links {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 20px;
+   padding: 20px;
+}
+.Git button{
+ padding: 5px 30px;
+ border: 1px solid white;
+ border-radius: 0%;
+}
+.Git button:hover{
+ background: white;
+}
+.contact p{
+   font-size: 18px;
+   font-family: 'Times New Roman', Times, serif;
+   font-style: oblique;
+   font-weight: 700;
+ }
+ .Git p{
+   font-size: 18px;
+   font-family: 'Times New Roman', Times, serif;
+   font-style: oblique;
+   font-weight: 700;
+ }
+.img-text {
+   max-width: 350px;
+   line-height: 1.6;
+   color: grey;
+   font-size: 18px;
+}
+@media (max-width: 768px) {
+   .footer-links {
+       flex-direction: column;
+       align-items: center;
+   }
+}
+@media (max-width: 576px) {
+   .footer-links {
+       text-align: center;
+   }
+}
+
+/* Bootstrap Utility Classes for Responsiveness */
+@media (max-width: 992px) {
+   .navbar-nav .nav-item {
+       border-bottom: 2px solid white;
+   }
+}
+@media (min-width: 992px) {
+   .navbar-nav .nav-item {
+       border-bottom: none !important;
+   }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiper.js Background Slider</title>
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    
+    <style>
+        /* Make Swiper Take Full Page */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .swiper {
+            width: 100%;
+            height: 100vh;
+        }
+
+        /* Ensure Each Slide Covers the Screen */
+        .swiper-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            color: white;
+            font-size: 2rem;
+            position: relative;
+        }
+
+        /* Background Images */
+        .slide1 { background-image: url('./image/Caleb\ Garden.jpg'); }
+        .slide2 { background-image: url('./image/Mass\ comm.jpg'); }
+        .slide3 { background-image: url('./image/Reception\ office.jpg'); }
+
+        /* Pagination Style */
+        .swiper-pagination {
+            bottom: 20px !important;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Swiper Container -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide1">Slide 1</div>
+            <div class="swiper-slide slide2">Slide 2</div>
+            <div class="swiper-slide slide3">Slide 3</div>
+        </div>
+
+        <!-- Pagination Dots -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var swiper = new Swiper(".mySwiper", {
+                loop: true, // Infinite Loop
+                autoplay: {
+                    delay: 3000, // 3 seconds before changing slides
+                    disableOnInteraction: false, // Keeps autoplay working
+                },
+                effect: "fade", // Smooth fade effect
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                speed: 1500, // Transition speed
+            });
+
+            console.log("Swiper initialized:", swiper); // Debugging log
+        });
+    </script>
+
+</body>
+</html>
