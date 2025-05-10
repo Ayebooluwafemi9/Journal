@@ -1,42 +1,25 @@
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   background-color: #f8f9fa;
   color: #333;
 }
-.nav-item:hover .dropdown-menu{
+.nav-item:hover .dropdown-menu {
   display: block;
   transition: all 0.3s;
- }
- .nav-item-special:hover .dropdown-menu{
-   display: block;
-   transition: all 0.3s;
- }
-.dropdown-menu{
+}
+.nav-item-special:hover .dropdown-menu {
+  display: block;
+  transition: all 0.3s;
+}
+.dropdown-menu {
   display: none;
   border: 1px solid black;
- }
-.dropdown-menu .dropdown-item:hover{
+}
+.dropdown-menu .dropdown-item:hover {
   color: blue;
   transition: all 0.3s;
 }
-/* .hero {
-  background: linear-gradient(135deg, #003366, #004d99);
-  color: white;
-  padding: 80px 0;
-  text-align: center;
-}
-.container h1{
-  font-size: 30px;
-  font-weight: 400;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-style: oblique;
-}
-.container p{
-  font-size: 16px;
-  font-weight: 400;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-style: oblique;
-} */
+
 /* Make Swiper Full-Screen */
 .swiper {
   width: 100%;
@@ -58,7 +41,7 @@ body {
   text-align: center;
   font-size: 4rem;
   font-weight: 800;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-style: oblique;
   position: relative;
   opacity: 0;
@@ -73,7 +56,7 @@ body {
 
 /* Responsive overlay */
 .overlay {
- padding-top: 15vh;
+  padding-top: 15vh;
 }
 
 /* Responsive text for mobile */
@@ -89,7 +72,7 @@ body {
   margin-bottom: 30px;
 }
 .section-title::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 50px;
   height: 3px;
@@ -100,18 +83,18 @@ body {
 .info-card {
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   padding: 25px;
   transition: all 0.3s ease;
 }
 .info-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 .editor-card {
   background-color: #ffffff;
   border-radius: 8px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
   padding: 20px;
   height: 100%;
   transition: 0.3s ease;
@@ -119,13 +102,13 @@ body {
 }
 .editor-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
 }
 .contact-section {
   background-color: #f1f5f9;
   padding: 50px 0;
 }
-#footer{
+#footer {
   color: white;
   background-color: #003366;
   padding: 10px 0;
@@ -135,24 +118,56 @@ body {
   line-height: 1.6;
   color: grey;
   font-size: 18px;
- }
- .Git button{
+}
+.Git button {
   padding: 5px 30px;
   border: 1px solid white;
   border-radius: 0%;
 }
-.Git button:hover{
+.Git button:hover {
   background: white;
 }
-.contact p{
+.contact p {
   font-size: 18px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   font-style: oblique;
   font-weight: 700;
 }
-.Git p{
+.Git p {
   font-size: 18px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   font-style: oblique;
   font-weight: 700;
+}
+.logo img,
+.logo-2 img {
+  max-width: 80%;
+  height: auto;
+}
+@media (min-width: 992px) {
+  .logo img {
+    height: 60px;
+  }
+  .logo-2 img {
+    height: 75px;
+    width: 100px;
+  }
+}
+@media (max-width: 768px) {
+  .logo img {
+    height: 50px;
+  }
+  .logo-2 img {
+    height: 80px;
+    width: 100px;
+  }
+}
+@media (max-width: 576px) {
+  .logo img {
+    height: 40px;
+  }
+  .logo-2 img {
+    height: 50px;
+    width: 50px;
+  }
 }
