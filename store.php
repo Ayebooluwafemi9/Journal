@@ -54,13 +54,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
     // Insert into database
-    $sql = "INSERT INTO users (first_name, last_name, age, sex, dob, nationality, email, phone, password) 
+    $sql = "INSERT INTO users (first_name, last_name, age, sex, dob, nationality, email, phone_number, password) 
             VALUES ('$first_name', '$last_name', '$age', '$sex', '$dob', '$nationality', '$email', '$phone', '$hashed_password')";
 
     if ($conn->query($sql) === TRUE) {
         $_SESSION['success'] = "Registration successful!";
         
-        // ✅ FIX: Clear output buffer and Redirect Instantly
+        //  FIX: Clear output buffer and Redirect Instantly
         ob_clean();  
         header("Location: index.html");
         exit;

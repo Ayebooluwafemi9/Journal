@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli("localhost", "root", "", "your_database_name");
+$conn = new mysqli("localhost", "root", "", "store");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $title = $_POST['title'];

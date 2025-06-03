@@ -36,4 +36,3 @@ $result = $conn->query("SELECT * FROM announcements ORDER BY event_date DESC");
     <script>AOS.init();</script>
 </body>
 </html>
-

@@ -353,3 +353,139 @@ body {
        border-bottom: none !important;
    }
 }
+
+
+
+
+/* contact css */
+
+body{
+    margin: 0;
+    padding: 0;
+}
+.container-fluid .h2{
+    font-size: 50px;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: oblique;
+    text-transform: uppercase;
+    padding: 20vh;
+}
+.container-fluid2{
+    border: 5px solid whitesmoke;
+    border-radius: 10px;
+}
+.contact-title{
+    padding: 20px;
+}
+.contact-title .h2{
+    margin-bottom: 15px;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: oblique;
+    text-transform: uppercase;
+    color: #333;
+}
+.contact-details p{
+    margin: 10px 0;
+    font-size: 16px;
+}
+.contact-details a{
+    color: #004080;
+}
+.contact-details a:hover{
+    color: green;
+}
+#footer {
+  color: white;
+  background-color: #003366;
+  padding: 10px 0;
+}
+.img-text {
+  max-width: 350px;
+  line-height: 1.6;
+  color: grey;
+  font-size: 18px;
+}
+.Git button {
+  padding: 5px 30px;
+  border: 1px solid white;
+  border-radius: 0%;
+}
+.Git button:hover {
+  background: white;
+}
+.contact p {
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+  font-style: oblique;
+  font-weight: 700;
+}
+.Git p {
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+  font-style: oblique;
+  font-weight: 700;
+}
+.logo img,
+.logo-2 img {
+  max-width: 80%;
+  height: auto;
+}
+@media (min-width: 992px) {
+  .logo img {
+    height: 60px;
+  }
+  .logo-2 img {
+    height: 75px;
+    width: 100px;
+  }
+}
+@media (max-width: 768px) {
+  .logo img {
+    height: 50px;
+  }
+  .logo-2 img {
+    height: 80px;
+    width: 100px;
+  }
+}
+@media (max-width: 576px) {
+  .logo img {
+    height: 40px;
+  }
+  .logo-2 img {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+
+
+/* prof ajayi styling */
+
+.container{
+  align-items: flex-end;
+  gap: 40px;
+  margin-bottom: 20px;
+  /* border: 1px solid black; */
+  background: whitesmoke;
+  border-radius: 10px;
+}
+.profile-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: left;
+  font-size: 14px;
+}
+.name{
+  font-weight: bold;
+  margin: 0;
+}
+.title{
+  font-size: 13px;
+  color: black;
+  margin: 0;
+}
