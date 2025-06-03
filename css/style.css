@@ -103,6 +103,12 @@ body {
        width: 90%;
        padding: 10px;
    }
+   .body-text h2{
+      font-size: 12px;
+   }
+   .body-text p{
+      font-size: 10px;
+   }
    .container-fluid2 .body-text h2{
       font-size: 13px;
       font-weight: 100;
