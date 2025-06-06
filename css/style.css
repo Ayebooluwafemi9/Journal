@@ -41,7 +41,6 @@ body {
        text-align: center;
    }
 }
-
 /* Header Logo Responsiveness */
 .logo img, .logo-2 img {
    max-width: 80%;
@@ -179,6 +178,7 @@ body {
    line-height: 1.4;
    font-family: 'Times New Roman', Times, serif;
 }
+/* footer */
 #footer {
   color: white;
   background-color: #003366;
@@ -261,38 +261,3 @@ body {
     max-width: 100%;
   }
 }
-.logo img,
-.logo-2 img {
-  max-width: 80%;
-  height: auto;
-}
-@media (min-width: 992px) {
-  .logo img {
-    height: 60px;
-  }
-  .logo-2 img {
-    height: 75px;
-    width: 100px;
-  }
-}
-@media (max-width: 768px) {
-  .logo img {
-    height: 50px;
-  }
-  .logo-2 img {
-    height: 80px;
-    width: 100px;
-  }
-}
-@media (max-width: 576px) {
-  .logo img {
-    height: 40px;
-  }
-  .logo-2 img {
-    height: 50px;
-    width: 50px;
-  }
-}
-
-
- 
