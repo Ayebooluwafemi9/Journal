@@ -24,17 +24,20 @@ $result = $stmt->get_result();
 if ($result->num_rows === 1) {
     $user = $result->fetch_assoc();
 
-    // If password is hashed
     if (password_verify($password, $user['password'])) {
-
-        // Store user session data
+        // Store session data
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['email'] = $user['email'];
 
-        // Redirect to homepage or dashboard
-        header("Location: index.html");
-        exit();
+        // ✅ Set admin session if email matches admin
+        if ($user['email'] === 'calebuniversitycujpas@gmail.com') {
+            $_SESSION['admin'] = true;
+            header("Location: admin_review.php"); // Admin dashboard
+        } else {
+            header("Location: index.html"); // Regular user homepage
+        }
 
+        exit();
     } else {
         echo "<script>alert('Incorrect password'); window.location.href='login.html';</script>";
     }

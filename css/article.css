@@ -19,6 +19,11 @@ body {
   color: blue;
   transition: all 0.3s;
 }
+.nav-link .active{
+  color: #007bff !important; /* Bootstrap primary color */
+  font-weight: bold;
+}
+
 /* Navbar Responsiveness */
 @media (max-width: 768px) {
    .navbar-nav {

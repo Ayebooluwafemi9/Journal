@@ -19,6 +19,10 @@ body {
   color: blue;
   transition: all 0.3s;
 }
+.active{
+  color: #007bff !important; /* Bootstrap primary color */
+  font-weight: bold;
+}
 
 /* Make Swiper Full-Screen */
 .swiper {
