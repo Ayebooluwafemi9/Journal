@@ -8,7 +8,11 @@ $result = $conn->query("SELECT * FROM announcements ORDER BY event_date DESC");
 <head>
     <title>Announcements</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <style>
+        h1{
+            text-align: center;
+        }
         .announcement {
             border: 1px solid #ccc;
             margin: 15px;
@@ -23,6 +27,7 @@ $result = $conn->query("SELECT * FROM announcements ORDER BY event_date DESC");
     </style>
 </head>
 <body>
+    <?php include '../includes/navbar.php'; ?>
     <h1>Journal Announcements</h1>
     <?php while($row = $result->fetch_assoc()): ?>
         <div class="announcement" data-aos="fade-up">
@@ -32,7 +37,9 @@ $result = $conn->query("SELECT * FROM announcements ORDER BY event_date DESC");
             <small>Event Date: <?= $row['event_date'] ?></small>
         </div>
     <?php endwhile; ?>
+    <?php include '../includes/footer.php'; ?>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>AOS.init();</script>
 </body>
 </html>
