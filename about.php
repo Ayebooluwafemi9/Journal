@@ -11,55 +11,7 @@
     <body>
 
      <!-- NAV header -->
-     <header class="container-fluid bg-white py-2 px-5">
-            <div class="logo-container d-flex justify-content-between align-item-center">
-              <div class="logo p-2">
-                <img src="./image/original caleb logo.jpg" alt="" height="80">
-          </div>
-          <div class="logo-2 p-1">
-            <img src="./image/copas logo.jpg" alt="" height="100" width="100">
-          </div>
-            </div>
-        <!-- Nav Section -->
-           <nav class="navbar navbar-expand-sm navbar-dark">
-                    <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                      <span class="navbar-toggler-icon text-dark bg-dark"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                      <ul class="navbar-nav mt-4 ps-3 gap-2">
-                        <li class="nav-item">
-                          <a class="nav-link text-dark active" href="./about.html" >About</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link text-dark" href="#">Announcement</a>
-                        </li>  
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown">Conference</a>
-                          <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">College Conference</a></li>
-                            <li><a class="dropdown-item" href="#">Departmental Conference</a></li>
-                          </ul>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link text-dark" href="./ED.html">Editorial Board</a>
-                        </li> 
-                        <li class="nav-item">
-                          <a class="nav-link text-dark" href="./article.html">Author's Guide</a>
-                        </li>  
-                         <li class="nav-item">
-                          <a class="nav-link text-dark" href="./submit-manuscript.html">Manuscript submission</a>
-                        </li>  
-                        <li class="nav-item">
-                          <a class="nav-link text-dark" href="./conttact.html" role="button">Contact Us</a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="buuton mt-3">
-                      <a href="./login.html"class="bg-primary text-decoration-none text-white text-center px-5 py-1 border rounded-pill">Login</a>
-                    </div>
-           </nav>
-     </header>
-
+      <?php include 'navbar.php'; ?>
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide"  style="background-image:url(./image/IMG-20250518-WA0019.jpg) ">
@@ -122,38 +74,7 @@
       </section>
     
       <!-- Footer -->
-      <footer id="footer" class="">
-        <div class="footer-links d-flex justify-content-around">
-          <!-- image -->
-          <div class="img">
-            <img src="./image/original caleb logo.jpg" alt="" style="height: 70px; width: 70%;">
-            <p class="img-text pt-4">The mission of Caleb University is to serve as a digital gateway and information hub for all members of the university community.</p>
-          </div>
-          <!-- Git -->
-          <div class="Git">
-            <p class="h3" style="font-size: 25px;">Get in touch</p>
-            <!-- Git list -->
-            <p><a href="" class="text-decoration-none text-white">02012910686</a></p>
-            <p style="color: gray;">KM 15, Ikorodu-itokin Road, Imota, Lagos</p>
-            <button type="button" class="btn text-info fw-bold">Get directions</button>
-          </div>
-          <!-- links -->
-           <div class="contact">
-            <p class="h3"style="font-size: 25px;">Content</p>
-            <div class="list">
-              <p><a href=""class="text-decoration-none"style="color: gray;">About</a></p>
-              <p><a href=""class="text-decoration-none"style="color: gray;">Conference</a></p>
-              <p><a href=""class="text-decoration-none"style="color: gray;">Editorial Board</a></p>
-              <p><a href=""class="text-decoration-none"style="color: gray;">Announcement</a></p>
-              <p><a href=""class="text-decoration-none"style="color: gray;">Contact</a></p>
-            </div>
-           </div>
-        </div>
-        <div class="copyright text-center">
-          <p>  &copy; 2025 CUL Journal of Pure and Applied Sciences. Caleb University, Lagos, Nigeria.</p>
-        </div>
-      </footer>
-
+        <?php include 'footer.php'; ?>
       <!-- js -->
        <script>
         document.addEventListener("DOMContentLoaded", function () {

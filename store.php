@@ -62,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         //  FIX: Clear output buffer and Redirect Instantly
         ob_clean();  
-        header("Location: index.html");
+        header("Location: index.php");
         exit;
     } else {
         $_SESSION['error'] = "Error: " . $conn->error;

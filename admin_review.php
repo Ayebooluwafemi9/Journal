@@ -140,7 +140,7 @@ $result = $conn->query("SELECT * FROM manuscripts ORDER BY id DESC");
     <?php endif; ?>
 
     <div class="text-center mt-4">
-        <a href="index.html" class="btn btn-outline-dark">Back to Home</a>
+        <a href="index.php" class="btn btn-outline-dark">Back to Home</a>
     </div>
 </div>
 

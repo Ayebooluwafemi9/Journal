@@ -11,7 +11,7 @@ $result = $conn->query("SELECT * FROM conference_announcements WHERE conference_
 </head>
 <body>
 
-<?php include 'includes/navbar.php'; ?>
+<?php include 'navbar.php'; ?>
 
 <div class="container mt-5">
     <h2 class="mb-4 text-center">College Conference Announcements</h2>
@@ -28,7 +28,7 @@ $result = $conn->query("SELECT * FROM conference_announcements WHERE conference_
     <?php endwhile; ?>
 </div>
 
-<?php include 'includes/footer.php'; ?>
+<?php include 'footer.php'; ?>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

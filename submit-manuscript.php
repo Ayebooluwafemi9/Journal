@@ -1,72 +1,44 @@
-<?php
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
-require 'PHPMailer/src/PHPMailer.php';
-require 'PHPMailer/src/SMTP.php';
-require 'PHPMailer/src/Exception.php';
-
-// Admin email for notifications
-$adminEmail = "calebuniversitycujpas@gmail.com";
-
-// Connect to database
-$conn = new mysqli("localhost", "root", "", "store");
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-// Collect form data
-$author_name = $_POST['author_name'];
-$author_email = $_POST['author_email'];
-$title = $_POST['title'];
-$abstract = $_POST['abstract'];
-
-// Handle file upload
-$targetDir = "uploads/";
-if (!is_dir($targetDir)) {
-    mkdir($targetDir);
-}
-$fileName = basename($_FILES["manuscript_file"]["name"]);
-$targetFile = $targetDir . time() . "_" . $fileName;
-
-if (move_uploaded_file($_FILES["manuscript_file"]["tmp_name"], $targetFile)) {
-    // Save to database
-    $stmt = $conn->prepare("INSERT INTO manuscripts (author_name, author_email, title, abstract, file_path, status) VALUES (?, ?, ?, ?, ?, 'Pending')");
-    $stmt->bind_param("sssss", $author_name, $author_email, $title, $abstract, $targetFile);
-    $stmt->execute();
-    $stmt->close();
-
-    // Send email to admin
-    $mail = new PHPMailer(true);
-    try {
-        $mail->isSMTP();
-        $mail->Host       = 'smtp.gmail.com';
-        $mail->SMTPAuth   = true;
-        $mail->Username   = $adminEmail;
-        $mail->Password   = 'xpxfjrjgcwmzczkw'; // App Password
-        $mail->SMTPSecure = 'tls';
-        $mail->Port       = 587;
-
-        $mail->setFrom($adminEmail, 'CUJPAS Submission');
-        $mail->addAddress($adminEmail);  // Send to admin
-
-        $mail->isHTML(true);
-        $mail->Subject = "New Manuscript Submission: $title";
-        $mail->Body    = "A new manuscript has been submitted by <strong>$author_name</strong>.<br><br>
-                          <strong>Title:</strong> $title<br>
-                          <strong>Email:</strong> $author_email<br>
-                          <strong>Abstract:</strong><br>$abstract";
-
-        $mail->send();
-    } catch (Exception $e) {
-        error_log("Mailer Error: {$mail->ErrorInfo}");
-    }
-
-    echo "<script>alert('Manuscript submitted successfully!'); window.location.href='index.html';</script>";
-} else {
-    echo "File upload failed.";
-}
-
-$conn->close();
-?>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit Manuscript</title>
+  <link rel="stylesheet" href="./css/manuscript.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+  <!-- header -->
+    <?php include 'navbar.php'; ?>
+  <!-- Body --> 
+  <div class="container bg-white p-4 rounded shadow mx-auto my-5" style="max-width: 600px;">
+  <h2 class="mb-4 text-center text-secondary">Submit Your Manuscript</h2>
+  <form action="submit_form_handler.php" method="POST" enctype="multipart/form-data">
+    <div class="mb-3">
+      <label>Author Name</label>
+      <input type="text" name="author_name" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label>Email</label>
+      <input type="email" name="author_email" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label>Paper Title</label>
+      <input type="text" name="title" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label>Abstract</label>
+      <textarea name="abstract" class="form-control" rows="4" required></textarea>
+    </div>
+    <div class="mb-3">
+      <label>Upload Manuscript (PDF/DOCX)</label>
+      <input type="file" name="manuscript_file" class="form-control" accept=".pdf,.doc,.docx" required>
+    </div>
+    <button type="submit" class="btn btn-primary w-100">Submit Manuscript</button>
+  </form>
+  </div>
+  <!-- FOOTER SECTION -->
+    <?php include 'footer.php'; ?>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

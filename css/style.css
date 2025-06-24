@@ -9,6 +9,10 @@ body {
    display: block;
    transition: all 0.3s;
 }
+.nav-item-special:hover .dropdown-menu {
+  display: block;
+  transition: all 0.3s;
+}
 .dropdown-menu {
    display: none;
    border: 1px solid black;
@@ -17,7 +21,10 @@ body {
    color: blue;
    transition: all 0.3s;
 }
-
+.active{
+  color: #007bff !important; /* Bootstrap primary color */
+  font-weight: bold;
+}
 /* Navbar Responsiveness */
 @media (max-width: 768px) {
    .navbar-nav {

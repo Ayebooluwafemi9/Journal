@@ -12,6 +12,10 @@ h2{
    display: block;
    transition: all 0.3s;
 }
+.nav-item-special:hover .dropdown-menu {
+  display: block;
+  transition: all 0.3s;
+}
 .dropdown-menu {
    display: none;
    border: 1px solid black;

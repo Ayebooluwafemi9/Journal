@@ -1,5 +1,4 @@
-<footer id="footer" class="">
-    <style>
+  <style>
         #footer {
             color: white;
             background-color: #003366;
@@ -29,7 +28,9 @@
             font-style: oblique;
             font-weight: 700;
         }
-
+        .contact a:hover{
+            color: white !important;
+        }
         .Git p {
             font-size: 18px;
             font-family: "Times New Roman", Times, serif;
@@ -52,10 +53,11 @@
         }
     </style>
 
+<footer id="footer" class="">  
     <div class="footer-links d-flex justify-content-around flex-wrap">
         <!-- image -->
         <div class="img">
-            <img src="./image/original caleb logo.jpg" alt="" style="height: 70px; width: 70%;">
+            <img src="image/original caleb logo.jpg" alt="" style="height: 70px; width: 70%;">
             <p class="img-text pt-4">The mission of Caleb University is to serve as a digital gateway and information hub for all members of the university community.</p>
         </div>
 

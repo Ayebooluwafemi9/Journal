@@ -35,7 +35,7 @@ if ($result->num_rows === 1) {
             $_SESSION['admin'] = true;
             header("Location: admin_review.php"); // Redirect to admin dashboard
         } else {
-            header("Location: index.html"); // Redirect regular user to homepage
+            header("Location: index.php"); // Redirect regular user to homepage
         }
         exit();
     } else {
